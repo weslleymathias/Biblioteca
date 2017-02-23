@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="{% static 'styles.css' %}" rel="stylesheet">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="{% static script.js %}"></script>
+   <title>MPEC</title>
+</head>
+<body>
+<img src = "templates/img/mpec.png" alt = "logo não apareceu">
+<div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Home</span></a></li>
+   <li><a href='#'><span>Pesquisar</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Acervo</span></a> 
+      <ul>
+         <li class='has-sub'><a href='#'><span>Professor</span></a></li>
+         <li class='has-sub'><a href='#'><span>Pesquisador</span></a></li>
+         <li class='has-sub'><a href='#'><span>Ano</span></a></li>
+         <li class='has-sub'><a href='#'><span>Área de conhecimento</span></a>
+            <ul>
+               <li><a href='#'><span>Física</span></a></li>
+               <li><a href='#'><span>Biologia</span></a></li>
+               <li class='last'><a href='#'><span>Química</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Nível de ensino</span></a>
+            <ul>
+               <li><a href='#'><span>Ensino Fundamental</span></a></li>
+               <li><a href='#'><span>Ensino Médio</span></a></li>
+               <li><a href='#'><span>EJA</span></a></li>
+               <li class='last'><a href='#'><span>Ensino Superior</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>Cadastre seu produto</span></a></li>
+   <li><a href='#'><span>Sobre a Biblioteca</span></a></li>
+   <li><a href='#'><span>Cooperação</span></a></li>
+   <li><a href='#'><span>Seja um avaliador</span></a></li>
+   <li class='last'><a href='#'><span>Login</span></a></li>
+</ul>
+</div>
+<form>
+  <input name="q">
+  <input type="submit" value="Search">
+</form>
+<img src = "templates/img/logo_ufop.png">
+<img src = "templates/img/logo_decom.png">
+<img src = "templates/img/logo_gaid.png">
+</body>
+<html>

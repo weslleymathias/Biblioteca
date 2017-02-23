@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Formulário de Cadastro</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>Formulário de Cadastro</h1>
+Título:
+{% for x in dissertacaos %}
+  <h2>Título: {{ x.titulo }}</h2>
+  Resumo: {{ x.resumo }}
+  Data da defesa: {{ x.data_defesa }}
+{% endfor %}
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+{% load static %}
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="{% static 'styles.css' %}">
+   <style type="text/css">
+   .Corpo {
+}
+   </style>
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>BDMPEC</title>
+</head>
+<body class="active">
+
+<div id='cssmenu'>
+<ul>
+   <li><a href='/index'><span>Início</span></a></li>
+   <li><a href='/acessoacervo'><span>Acesso ao Acervo</span></a></li>
+   <li><a href='#'><span>Serviço de Avaliação</span></a></li>
+   <li class='last'><a href='#'><span>Sobre a Biblioteca</span></a></li>
+   <li class='last'></li>
+</ul>
+</div>
+<blockquote>
+  <h2><em>Pesquisar:</em></h2>
+</blockquote>
+<form name="form1" method="post" action="">
+  <div align="center">
+    <table width="100%">
+      <tr>
+        <td><div align="center">
+          <p>
+            <label for="textfield2"></label>
+            <em>Digite os termos de sua pesquisa:</em>
+            <input type="text" name="textfield" id="textfield2">
+            <input type="submit" name="button" id="button" value="Pesquisa">
+            {% for x in dissertacao %}
+              <h2>{{ x.titulo }}</h2>
+              {{ x.resumo }}
+              {{ x.data_defesa }}
+            {% endfor %}
+            <input type="reset" name="button2" id="button2" value="Limpar ">
+          </p>
+          <table width="98%">
+            <tr>
+              <td width="9%"><div align="center">Buscar por:</div></td>
+              <td width="10%"><label for="select"></label>
+                <div align="center">
+                  <select name="select" id="select">
+                    <option value="Assunto">Assunto</option>
+                    <option value="Pesquisador">Pesquisador</option>
+                    <option value="Palavra-Chave">Palavra-Chave</option>
+                  </select>
+                </div></td>
+              <td width="11%"><div align="center">Disciplina:</div></td>
+              <td width="9%"><label for="select2"></label>
+                <div align="center">
+                  <select name="select2" id="select2">
+                    <option value="Todas">Todas</option>
+                    <option value="Física">Física</option>
+                    <option value="Química">Química</option>
+                    <option value="Biologia">Biologia</option>
+                  </select>
+                </div></td>
+              <td width="10%"><div align="center">Categoria:</div></td>
+              <td width="13%"><label for="select3"></label>
+                <div align="center">
+                  <select name="select3" id="select3">
+                    <option value="Todas">Todas</option>
+                    <option value="Apostila">Apostila</option>
+                    <option value="Apresentacao">Apresentação</option>
+                    <option value="Cartilha">Cartilha</option>
+                    <option value="Curso">Curso</option>
+                    <option value="Hipertexto">Hipertexto</option>
+                    <option value="Jogo">Jogo</option>
+                    <option value="ModEducacional">Modelo Educacional</option>
+                    <option value="LivParadidatico">Livro Paradidático</option>
+                    <option value="Midia">Mídia</option>
+                    <option value="ObjEnsino">Objeto Ensino</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="PagWeb">Página Web</option>
+                    <option value="Palestra">Palestra</option>
+                    <option value="ProDisciplina">Proposta de Disciplina</option>
+                    <option value="Prototipo">Protótipo</option>
+                    <option value="SeqDidatica">Sequência Didática</option>
+                  </select>
+                </div></td>
+              <td width="13%"><div align="center">Ano de Publicação:</div></td>
+              <td width="7%"><label for="textfield3"></label>                <div align="center">
+                <input name="textfield2" type="text" id="textfield3" size="5" maxlength="4">              
+              </div></td>
+              <td width="11%"><div align="center">Nível de Ensino:              </div></td>
+              <td width="7%"><label for="select4"></label>
+                <div align="center">
+                  <select name="select4" id="select4">
+                    <option value="Todos">Todos</option>
+                    <option value="EFAI">Ensino Fundamental (Anos Iniciais)</option>
+                    <option value="EFAF">Ensino Fundamental (Anos Finais)</option>
+                    <option value="EM">Ensino Médio</option>
+                    <option value="EJA">E.J.A</option>
+                    <option value="ES">Ensino Superior</option>
+                  </select>
+                </div></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
+  </div>
+</form>
+<p>&nbsp;</p>
+
+</body>
+<html>

@@ -1,0 +1,96 @@
+<!doctype html>
+{% load static %}
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="{% static 'styles.css' %}">
+   <style type="text/css">
+   .Corpo {
+}
+   .rodape {
+	background-color: #FFF;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+   .active .gallery.autoplay.items-3 {
+	height: auto;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+}
+   .active .rodape p {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	color: #FFF;
+}
+   .active .gallery.autoplay.items-3 .rodape {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #900;
+	border-right-color: #900;
+	border-bottom-color: #900;
+	border-left-color: #900;
+}
+   </style>
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="{% static script.js %}"></script>
+   <title>BDMPEC</title>
+</head>
+<body class="active">
+
+<div id='cssmenu'>
+<ul>
+   <li><a href='#'><span>Início</span></a></li>
+   <li><a href="/acessoacervo"><span>Acesso ao Acervo</span></a></li>{% csrf_token %}
+   <li><a href='#'><span>Serviço de Avaliação</span></a></li>
+   <li class='last'><a href='#'><span>Sobre a Biblioteca</span></a></li>
+   <li class='last'></li>
+</ul>
+</div>
+
+  <meta charset="UTF-8">
+  <title>Demo of gallery.css</title>
+  <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gallery.prefixed.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gallery.theme.css' %}">
+  <div class="gallery autoplay items-3">
+    <div id="item-1" class="control-operator"></div>
+    <div id="item-2" class="control-operator"></div>
+    <div id="item-3" class="control-operator"></div>
+
+    <figure class="item">
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="{{ MEDIA_URL }}imagens/logompec02.fw.png" width="730" height="350" /></p>
+    </figure>
+
+<figure class="item">
+      <p>&nbsp;</p>
+      <p><img src="{{ MEDIA_URL }}imagens/campusop.fw.png" width="730" height="350" /></p>
+    </figure>
+
+<figure class="item">
+      <p>&nbsp;</p>
+      <p><img src="{{ MEDIA_URL }}imagens/gdcom.fw.png" width="730" height="350" /></p>
+</figure>
+<p>&nbsp;</p>
+<div class="rodape">
+<p>&nbsp;</p>
+  <div align="center">© BDMPEC - Biblioteca Digital do Mestrado Profissional em Ensino de Ciências | Imagens: IGD | Design: IGD | Programação: Weslley Mathias & Flávia Oliveira</div>
+</div>
+  </div></body>
+  
+      
+
+</html>
